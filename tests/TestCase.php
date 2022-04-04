@@ -2,9 +2,9 @@
 
 namespace Beem\Laravel\Beem\Tests;
 
+use Beem\Laravel\Beem\BeemServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Beem\Laravel\Beem\BeemServiceProvider;
 
 class TestCase extends Orchestra
 {

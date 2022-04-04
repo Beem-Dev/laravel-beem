@@ -2,9 +2,9 @@
 
 namespace Beem\Laravel\Beem;
 
+use Beem\Laravel\Beem\Commands\BeemCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Beem\Laravel\Beem\Commands\BeemCommand;
 
 class BeemServiceProvider extends PackageServiceProvider
 {
