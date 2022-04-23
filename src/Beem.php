@@ -5,7 +5,6 @@ namespace Beem\Laravel;
 use GuzzleHttp\Client;
 use InvalidArgumentException;
 
-
 class Beem
 {
     protected array $options;
@@ -47,5 +46,4 @@ class Beem
             ],
         ]);
     }
-
 }
