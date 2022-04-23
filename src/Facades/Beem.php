@@ -1,11 +1,11 @@
 <?php
 
-namespace Beem\Laravel\Beem\Facades;
+namespace Beem\Laravel\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Beem\Laravel\Beem\Beem
+ * @see \Laravel
  */
 class Beem extends Facade
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Beem\Laravel\Beem;
+namespace Beem\Laravel;
 
-use Beem\Laravel\Beem\Commands\BeemCommand;
+use Beem\Laravel\Commands\BeemCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 

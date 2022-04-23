@@ -44,6 +44,17 @@ Optionally, you can publish the views using
 php artisan vendor:publish --tag="laravel-beem-views"
 ```
 
+## Services
+- [ ] SMS
+- [ ] CONTACTS
+- [ ] MULTICOUNTRY SMS AND SMPP
+- [ ] USSD
+- [ ] AIRTIME
+- [ ] PAYMENTS COLLECTIONS
+- [ ] PAYMENTS CHECKOUT
+- [ ] DISBURSEMENTS
+- [ ] OTP
+
 ## Usage
 
 ```php

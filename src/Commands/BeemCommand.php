@@ -1,6 +1,6 @@
 <?php
 
-namespace Beem\Laravel\Beem\Commands;
+namespace Beem\Laravel\Commands;
 
 use Illuminate\Console\Command;
 
