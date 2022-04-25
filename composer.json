@@ -58,10 +58,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Beem\\Laravel\\Beem\\BeemServiceProvider"
+                "Beem\\Laravel\\BeemServiceProvider"
             ],
             "aliases": {
-                "Beem": "Beem\\Laravel\\Beem\\Facades\\Beem"
+                "Beem": "Beem\\Laravel\\Facades\\Beem"
             }
         }
     },
