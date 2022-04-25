@@ -28,12 +28,11 @@ trait HandlesPaymentCheckouts
         string $transaction_id,
         string $reference_number,
         string $mobile = null
-    )
-    {
+    ) {
         $dataString = 'https://checkout.beem.africa/v1/checkout?';
 
         $data = collect(compact('amount', 'transaction_id', 'reference_number', 'mobile'))
-            ->reject(fn($datum) => is_null($datum))
+            ->reject(fn ($datum) => is_null($datum))
             ->all();
 
         foreach ($data as $key => $item) {

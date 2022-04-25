@@ -11,7 +11,7 @@ class BeemServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/beem.php' => config_path('beem.php')
+                __DIR__ . '/../config/beem.php' => config_path('beem.php'),
             ], 'beem-config');
         }
     }
@@ -25,9 +25,9 @@ class BeemServiceProvider extends ServiceProvider
 
     private function registerFacades()
     {
-        $this->app->singleton('Beem', fn ($app) => new \Beem\Laravel\Beem);
+        $this->app->singleton('Beem', fn ($app) => new \Beem\Laravel\Beem());
 
-        $this->app->singleton('BeemRedirect', fn ($app) => new \Beem\Laravel\BeemRedirect);
+        $this->app->singleton('BeemRedirect', fn ($app) => new \Beem\Laravel\BeemRedirect());
     }
 
     private function registerRoutes()

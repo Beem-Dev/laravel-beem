@@ -128,13 +128,22 @@ trait HandlesContacts
         string $city = null,
         string $area = null,
         string $birth_date = null
-    ): Response
-    {
+    ): Response {
         $data = collect(compact(
-            'fname', 'lname', 'title', 'gender', 'mob_no2', 'email', 'country', 'city', 'area', 'birth_date'
+            'fname',
+            'lname',
+            'title',
+            'gender',
+            'mob_no2',
+            'email',
+            'country',
+            'city',
+            'area',
+            'birth_date'
         ))
-            ->reject(fn($datum) => is_null($datum))
-            ->map(fn($item, $key) => $key === 'birth_date'
+            ->reject(fn ($datum) => is_null($datum))
+            ->map(
+                fn ($item, $key) => $key === 'birth_date'
                 ? Carbon::parse($item)->format('Y-m-d')
                 : $item
             )
@@ -180,13 +189,22 @@ trait HandlesContacts
         string $city = null,
         string $area = null,
         string $birth_date = null
-    ): Response
-    {
+    ): Response {
         $data = collect(compact(
-            'fname', 'lname', 'title', 'gender', 'mob_no2', 'email', 'country', 'city', 'area', 'birth_date'
+            'fname',
+            'lname',
+            'title',
+            'gender',
+            'mob_no2',
+            'email',
+            'country',
+            'city',
+            'area',
+            'birth_date'
         ))
-            ->reject(fn($datum) => is_null($datum))
-            ->map(fn($item, $key) => $key === 'birth_date'
+            ->reject(fn ($datum) => is_null($datum))
+            ->map(
+                fn ($item, $key) => $key === 'birth_date'
                 ? Carbon::parse($item)->format('Y-m-d')
                 : $item
             )

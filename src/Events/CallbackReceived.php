@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 
 class CallbackReceived
 {
-    use Dispatchable, InteractsWithSockets;
+    use Dispatchable;
+    use InteractsWithSockets;
 
     public Request $request;
 

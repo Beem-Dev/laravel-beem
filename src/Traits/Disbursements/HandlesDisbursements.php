@@ -29,8 +29,7 @@ trait HandlesDisbursements
         string $walletNumber,
         string $walletCode,
         string $currency = 'TZS'
-    ): Response
-    {
+    ): Response {
         $data = [
             'amount' => $amount,
             'client_reference_id' => $clientReferenceId,
