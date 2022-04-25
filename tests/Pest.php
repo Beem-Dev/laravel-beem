@@ -1,5 +1,5 @@
 <?php
 
-use Beem\Laravel\Beem\Tests\TestCase;
+use Beem\Laravel\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

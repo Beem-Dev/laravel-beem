@@ -1,8 +1,8 @@
 <?php
 
-namespace Beem\Laravel\Beem\Tests;
+namespace Beem\Laravel\Tests;
 
-use Beem\Laravel\Beem\BeemServiceProvider;
+use Beem\Laravel\BeemServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -12,9 +12,9 @@ class TestCase extends Orchestra
     {
         parent::setUp();
 
-        Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Beem\Laravel\\Beem\\Database\\Factories\\'.class_basename($modelName).'Factory'
-        );
+        // Factory::guessFactoryNamesUsing(
+        //     fn (string $modelName) => 'Beem\Laravel\\Database\\Factories\\'.class_basename($modelName).'Factory'
+        // );
     }
 
     protected function getPackageProviders($app)

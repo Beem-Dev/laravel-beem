@@ -18,38 +18,51 @@ You can install the package via composer:
 composer require beem/laravel-beem
 ```
 
-You can publish and run the migrations with:
+<!-- You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-beem-migrations"
+php artisan vendor:publish --tag="beem-migrations"
 php artisan migrate
-```
+``` -->
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-beem-config"
+php artisan vendor:publish --tag="beem-config"
 ```
 
-This is the contents of the published config file:
+<!-- This is the contents of the published config file:
 
 ```php
 return [
 ];
-```
+``` -->
 
-Optionally, you can publish the views using
+<!-- Optionally, you can publish the views using
 
 ```bash
 php artisan vendor:publish --tag="laravel-beem-views"
-```
+``` -->
+
+## Services
+- [ ] SMS
+- [ ] CONTACTS
+- [ ] MULTICOUNTRY SMS AND SMPP
+- [ ] USSD
+- [ ] AIRTIME
+- [ ] PAYMENTS COLLECTIONS
+- [ ] PAYMENTS CHECKOUT
+- [ ] DISBURSEMENTS
+- [ ] OTP
 
 ## Usage
 
-```php
-$beem = new Beem\Laravel\Beem();
+WIP
+
+<!-- ```php
+$beem = new Beem\Laravel\Beem;
 echo $beem->echoPhrase('Hello, Beem\Laravel!');
-```
+``` -->
 
 ## Testing
 
@@ -71,6 +84,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
+- [Bryce Andy](https://github.com/bryceandy) for the initial implementation.
 - [Alpha Olomi](https://github.com/alphaolomi)
 - [All Contributors](../../contributors)
 
