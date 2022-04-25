@@ -2,48 +2,33 @@
 
 namespace Beem\Laravel;
 
-use GuzzleHttp\Client;
-use InvalidArgumentException;
+use Beem\Laravel\Traits\Airtime\HandlesAirtime;
+use Beem\Laravel\Traits\Contacts\HandlesContacts;
+use Beem\Laravel\Traits\Disbursements\HandlesDisbursements;
+use Beem\Laravel\Traits\Otp\HandlesOtp;
+use Beem\Laravel\Traits\PaymentCollections\HandlesPaymentCollections;
+use Beem\Laravel\Traits\Sms\HandlesSms;
+use Beem\Laravel\Traits\Ussd\HandlesUssd;
+use Illuminate\Config\Repository;
+use Illuminate\Contracts\Foundation\Application;
 
 class Beem
 {
-    protected array $options;
-
-    protected Client $httpClient;
+    use HandlesAirtime;
+    use HandlesContacts;
+    use HandlesDisbursements;
+    use HandlesOtp;
+    use HandlesPaymentCollections;
+    use HandlesSms;
+    use HandlesUssd;
 
     /**
+     * Fetch the prefix name for all routes
      *
-     * @param array $options
-     * @param Client|null $httpClient
-     *
-     * @throws InvalidArgumentException
+     * @return Repository|Application|mixed
      */
-    public function __construct(array $options = [], ?Client $httpClient = null)
+    public static function pathPrefix()
     {
-        if (! array_key_exists('api_key', $options)) {
-            throw new InvalidArgumentException("apiKey is required.");
-        }
-
-        if (! array_key_exists('api_secret', $options)) {
-            throw new InvalidArgumentException("apiKey is required.");
-        }
-
-        if (! array_key_exists('environment', $options)) {
-            $options['environment'] = 'testing';
-        }
-
-        $this->options = $options;
-        $this->httpClient = $this->makeClient($options, $httpClient);
-    }
-
-    protected function makeClient(array $options, ?Client $client = null): Client
-    {
-        return ($client instanceof Client) ? $client : new Client([
-            'headers' => [
-                'Accept' => 'application/json',
-                'Basic ' . base64_encode($options['api_key'] . ':' . $options['secret_key']),
-                'Content-Type' => 'application/json',
-            ],
-        ]);
+        return config('beem.path');
     }
 }
